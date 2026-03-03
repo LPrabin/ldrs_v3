@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "ldrs-v3"
+version = "0.1.0"
+description = "Hybrid RAG Deep Agent System — Living Document RAG System v3"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {text = "MIT"}
+
+dependencies = [
+    # Agent framework
+    "deepagents>=0.4.4",
+    "langchain>=0.3",
+    "langgraph",
+    "langsmith",
+
+    # LLM
+    "openai",
+    "litellm",
+    "python-dotenv",
+    "tiktoken",
+
+    # Retrieval
+    "rank-bm25",
+    "watchdog",
+
+    # Database
+    "psycopg2-binary",
+    "pgvector",
+    "asyncpg",
+
+    # API & UI
+    "fastapi",
+    "uvicorn[standard]",
+    "streamlit",
+
+    # PDF support (for pageindex utils)
+    "PyPDF2",
+    "PyMuPDF",
+
+    # YAML config
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100

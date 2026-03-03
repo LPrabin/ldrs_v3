@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+hallucination_log.jsonl
+
+# Sessions (VFS working directories)
+sessions/
+
+# Docker
+pgdata/
+
+# Test artifacts
+.pytest_cache/
+htmlcov/
+.coverage
+*.md
+*.json
+*.sql
