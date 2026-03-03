@@ -37,6 +37,6 @@ pgdata/
 .pytest_cache/
 htmlcov/
 .coverage
-*.md
+
 *.json
 *.sql
